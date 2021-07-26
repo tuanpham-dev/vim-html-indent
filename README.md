@@ -5,15 +5,18 @@ HTML indent plugin for Vim. Based on [xml.vim](https://vim.sourceforge.io/script
 Allows for automatic indentation of multiline element attributes, for example:
 
 ```html
-<form action="/submit-form"
-      method="post"
-      name="myForm">
-
+<form
+  action="/submit-form"
+  method="post"
+  name="myForm"
+>
     <label for="fullname">Your name: </label>
-    <input type="text"
-           id="fullname"
-           name="fullname"
-           placeholder="Full name">
+    <input
+      type="text"
+      id="fullname"
+      name="fullname"
+      placeholder="Full name"
+    />
 
     <select name="sex">
         <option value="male">Male</option>
@@ -30,4 +33,4 @@ If you have [pathogen](https://github.com/tpope/vim-pathogen) installed, simply 
 
     cd ~/.vim/bundle
     git clone git://github.com/jasonwoodland/vim-html-indent.git
-    
+

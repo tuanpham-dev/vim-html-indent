@@ -54,22 +54,7 @@ fun! HtmlIndentGet(cur_lnum, use_syntax_check)
   endif
 
   " If cur_line is >
-  if match(cur_line, '^\s*>$') != -1
-    " search up for <open...
-    if match(prev_line, '^\s*[^<]*$') != -1
-      let slnum = prev_lnum
-
-      while match(getline(slnum), '^\s*<') == -1
-        let slnum = slnum - 1
-      endwhile
-
-      " Match <open... tag indentation
-      return indent(slnum)
-    endif
-  endif
-
-  " If cur_line is />
-  if match(cur_line, '^\s*\/>$') != -1
+  if match(cur_line, '^\s*>$') != -1 || match(cur_line, '^\s*\/>$') != -1
     " search up for <open...
     if match(prev_line, '^\s*[^<]*$') != -1
       let slnum = prev_lnum
